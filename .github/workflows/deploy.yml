@@ -56,7 +56,7 @@ jobs:
         uses: burnett01/rsync-deployments@5.2.1
         with:
           switches: -ravz --delete
-          path: dist/*
+          path: dist/inti-ja-front/*
           remote_path: /home/${{ secrets.SSH_USER }}/docker/nginx/html
           remote_host: ${{ secrets.SSH_HOST }}
           remote_user: ${{ secrets.SSH_USER }}
