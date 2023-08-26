@@ -1,0 +1,23 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .found {
+    background: linear-gradient(rgb(63, 72, 123), rgb(58, 32, 110), rgb(10, 10, 74), rgb(0, 0, 17));  
+    // background-image: url('https://fondosmil.com/fondo/47987.jpg');
+    // background-image: url(../../../assets/imgs/IntiPaz2023.png);
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: cover;
+    // background-size: contain;
+  }
+//   .card-found {
+//     background-image: url('https://fondosmil.com/fondo/47987.jpg');
+//   }
+  ::ng-deep :root {
+      overflow-y: hidden;
+      overflow-x: hidden;
+  }

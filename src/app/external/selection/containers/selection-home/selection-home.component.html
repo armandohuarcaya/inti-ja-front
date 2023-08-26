@@ -1,0 +1,77 @@
+<nb-layout>
+    <!-- <nb-layout-header fixed>Company Name</nb-layout-header>
+     -->
+    <nb-layout-column class="found">
+        <!-- <div class=""> -->
+        <div class="row abs-center">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4">
+                <nb-card style="border-radius: 3rem;" [nbSpinner]="loading" nbSpinnerSize="tiny"
+                    nbSpinnerStatus="primary">
+                    <nb-card-header class="text-center" style="font-weight: bold;">
+                        REGISTRE SU POLO
+                    </nb-card-header>
+                    <nb-card-body>
+                        <form [formGroup]="formHeaders">
+                            <div>
+                                <label class="label">Nombre completo:</label>
+                                <input type="text" status="info" nbInput fullWidth shape="semi-round"
+                                    formControlName="name" placeholder="Ingrese su nombre completo" fieldSize="small">
+                            </div>
+                            <br>
+                            <div>
+                                <label class="label">Sexo:</label>
+                                <nb-select fullWidth status="info" formControlName="sexo" shape="semi-round" size="small">
+                                    <nb-option value="" disabled>Seleccione</nb-option>
+                                    <nb-option *ngFor="let item of sexos" [value]="item.id">{{item.nombre}}</nb-option>
+                                </nb-select>
+                            </div>
+                            <br>
+                            <div>
+                                <label class="label">Nombre polo:</label>
+                                <input type="text" status="info" nbInput fullWidth shape="semi-round"
+                                    formControlName="name_polo" placeholder="Ingrese su nombre o apodo en el polo" fieldSize="small">
+                            </div>
+                            <br>
+                            <div>
+                                <label class="label">Talla polo:</label>
+                                <nb-select fullWidth status="info" formControlName="size_polo" shape="semi-round" size="small">
+                                    <nb-option value="" disabled>Seleccione</nb-option>
+                                    <nb-option *ngFor="let item of tallas" [value]="item">{{item}}</nb-option>
+                                </nb-select>
+                            </div>
+                            <br>
+                            <div>
+                                <label class="label">Número polo:</label>
+                                <input type="number" status="info" nbInput fullWidth shape="semi-round"
+                                    formControlName="number_polo" placeholder="Ingrese el n° del polo" fieldSize="small">
+                            </div>
+                            <div class="text-center" *ngIf="!satisfactory && msg">
+                                <br>
+                                <nb-alert status="danger" style="font-size: 10px;">{{msg}}
+                                </nb-alert>
+                            </div>
+                            <div class="text-center" *ngIf="satisfactory">
+                                <br>
+                                <nb-alert status="success" style="font-size: 10px;">{{msg}}
+                                </nb-alert>
+                            </div>
+                        </form>
+                    </nb-card-body>
+                    <nb-card-footer class="text-center">
+            
+                        <button nbButton size="tiny" status="primary" shape="semi-round" (click)="register()"
+                            [disabled]="formHeaders.invalid" [nbSpinner]="loading">Guardar</button>
+
+                    </nb-card-footer>
+                </nb-card>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+        <!-- </div> -->
+    </nb-layout-column>
+</nb-layout>

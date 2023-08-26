@@ -1,0 +1,15 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  .found {
+    background-image: url('https://fondosmil.com/fondo/47987.jpg');
+  }
+//   .card-found {
+//     background-image: url('https://fondosmil.com/fondo/47987.jpg');
+//   }
+  ::ng-deep :root {
+      overflow-y: hidden;
+  }

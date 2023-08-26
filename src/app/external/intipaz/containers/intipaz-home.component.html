@@ -1,0 +1,46 @@
+<nb-layout>
+    <!-- <nb-layout-header fixed>
+        CAMPEONATO INTERNO
+    </nb-layout-header> -->
+    
+    <nb-layout-column style="padding: 0px;">
+        <nb-card status="primary" style=" height: 100%;">
+            <nb-card-header fixed style="border-radius: 0px; align-items: center;" class="d-flex headers">
+                    <!-- <img src="https://www.pbcc.com.co/wp-content/uploads/2016/12/uefa-champions-league.png" alt="" height="65"> -->
+                    <img src="../../../../assets/imgs/IntiPaz2023Logo.png" alt="" height="95" width="95">
+                    <div class="table-responsive">
+                        <nb-button-group size="medium" shape="round" ghost status="warning">
+                            <button nbButtonToggle pressed (click)="selectOption('equipos')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; EQUIPOS</button>
+                            <button nbButtonToggle (click)="selectOption('grupos')"><nb-icon icon="people-outline" status="success"></nb-icon>&nbsp; GRUPOS</button>
+                            <!-- <button nbButtonToggle (click)="selectOption('sorteos')"><nb-icon icon="globe-outline" status="success"></nb-icon>&nbsp; SORTEOS</button> -->
+                            <button nbButtonToggle (click)="selectOption('partidos')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; PARTIDOS</button>
+                            <button nbButtonToggle (click)="selectOption('tabla-posicion')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; TABLA</button>
+                            <!-- <button nbButtonToggle (click)="selectOption('organigrama')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; FASES</button> -->
+                        </nb-button-group>
+                    </div>
+            </nb-card-header>
+            <nb-card-body [class]="['equipos', 'organigrama'].includes(views) ? 'cuerpo' : ''">
+                <span [ngSwitch]="views">
+                    <span *ngSwitchCase="'equipos'">
+                        <app-v-equipment></app-v-equipment>
+                    </span>
+                    <span *ngSwitchCase="'grupos'">
+                        <app-v-groups></app-v-groups>
+                    </span>
+                    <span *ngSwitchCase="'partidos'">
+                        <app-v-partities></app-v-partities>
+                    </span>
+                    <span *ngSwitchCase="'tabla-posicion'">
+                        <app-v-table-position></app-v-table-position>
+                    </span>
+                    <span *ngSwitchCase="'organigrama'" class="text-center">
+                        <app-v-organigrama></app-v-organigrama>
+                    </span>
+                    <!-- <span *ngSwitchDefault>
+                    </span> -->
+                </span>
+                
+            </nb-card-body>
+        </nb-card>
+    </nb-layout-column>
+</nb-layout>

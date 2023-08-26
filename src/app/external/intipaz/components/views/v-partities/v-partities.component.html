@@ -1,0 +1,113 @@
+<div class="table-responsive">
+    <nb-tabset fullWidth>
+        <nb-tab tabTitle="FÚTSAL" [active]="false" [disabled]="true">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryFutsal('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryFutsal('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryFutsal('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataFut;let i = index" [class]="dataFut.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header>
+                                {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                             </nb-card-header>
+                             <nb-card-body>
+                                 <div class="table-responsive">
+                                     <table class="table table-sm">
+                                         
+                                         <tbody>
+                                             <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
+                                                 <!-- <td>{{ik+1}}</td> -->
+                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="30"></td>
+                                                 <td>{{det.equipo}}</td>
+                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
+                                             </tr>
+                                         </tbody>
+                                     </table>
+                                 </div>
+                             </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+        <nb-tab tabTitle="BÁSQUET" [active]="false" [disabled]="true">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryBasquet('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryBasquet('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryBasquet('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataBasq;let i = index" [class]="dataBasq.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header>
+                                {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                             </nb-card-header>
+                             <nb-card-body>
+                                 <div class="table-responsive">
+                                     <table class="table table-sm">
+                                         
+                                         <tbody>
+                                             <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
+                                                 <!-- <td>{{ik+1}}</td> -->
+                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="30"></td>
+                                                 <td>{{det.equipo}}</td>
+                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
+                                             </tr>
+                                         </tbody>
+                                     </table>
+                                 </div>
+                             </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+        <nb-tab tabTitle="VOLEY" [active]="true">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryVoley('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryVoley('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryVoley('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataVoley;let i = index" [class]="dataVoley.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header  style="position: relative;">
+                                <nb-badge text="Pendiente" status="warning" position="top right"></nb-badge>
+                               {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        
+                                        <tbody>
+                                            <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
+                                                <!-- <td>{{ik+1}}</td> -->
+                                                <td style="width: 1px;"><img [src]="det.logo" alt="" height="30"></td>
+                                                <td>{{det.equipo}}</td>
+                                                <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+    </nb-tabset>
+</div>

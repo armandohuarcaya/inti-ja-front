@@ -1,0 +1,17 @@
+.conten {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.child {
+    flex-grow: 1;
+    width: 200px;
+    // height: 600px;
+}
+.shadow:hover {
+    transform: scale(0.9);
+}
+img {
+    border-radius: 10rem;;
+}

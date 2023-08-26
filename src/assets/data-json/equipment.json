@@ -1,0 +1,40 @@
+{   "data": [
+        {
+            "id_equipo": 1,
+            "nombre": "GP Horeb",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU",
+            "iglesia": "El Inti"
+        },
+        {
+            "id_equipo": 2,
+            "nombre": "GP El Olam",
+            "logo": "https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290",
+            "iglesia": "El Inti"
+        },
+        {
+            "id_equipo": 3,
+            "nombre": "GP Emaús",
+            "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU",
+            "iglesia": "El Inti"
+        },
+        {
+            "id_equipo": 4,
+            "nombre": "GP Jehová Jiréh",
+            "logo": "https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png",
+            "iglesia": "El Inti"
+        },
+        {
+            "id_equipo": 5,
+            "nombre": "GP Migdal",
+            "logo": "https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go",
+            "iglesia": "El Inti"
+        },
+        {
+            "id_equipo": 6,
+            "nombre": "GP Los amigos del Inti",
+            "logo": "https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg",
+            "iglesia": "El Inti"
+        }
+        
+    ]
+}

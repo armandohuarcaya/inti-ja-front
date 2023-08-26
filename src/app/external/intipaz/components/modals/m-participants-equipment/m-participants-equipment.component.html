@@ -1,0 +1,83 @@
+<nb-card status="primary" class="scrollModal" style="width:500px;" [nbSpinner]="loading">
+    <nb-card-header class="card_header_backgournd">
+      <div class="d-flex align-items-center justify-content-between">
+          <div>
+              <nb-icon icon="people-outline" status="success"></nb-icon>&nbsp;&nbsp;PARTICIPANTES
+          </div>
+          <button nbButton outline status="basic" size="tiny" (click)="closeModal()">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+  </nb-card-header>
+    <nb-card-body>
+      <nb-tabset fullWidth>
+        <nb-tab tabTitle="FÚTSAL" tabIcon="person-outline">
+          <div class="table-responsive">
+            <table  class="table table-sm">
+              <thead>
+                <tr>
+                    <th colspan="5">CATEGORIA VARONES</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Nombres</th>
+                    <th>DNI</th>
+                    <th>Sexo</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="paritcipants.length>0; else emptyContent">
+                <tr *ngFor="let item of paritcipants; let i=index">
+                    <td class="text-center">{{ (i+1) }}</td>
+                    <td>{{ item.empleado }}</td>
+                    <td>{{ item.nro_vale }}</td>
+                    <td>{{ item.nro_vale }}</td>
+                </tr>
+              </tbody>
+              <ng-template #emptyContent>
+                <tbody>
+                <tr>
+                  <th colspan="9" class="text-center">No se encontraron vales registrados</th>
+                </tr>
+                </tbody>
+              </ng-template>
+            </table>
+          </div>
+          <div class="table-responsive">
+            <table  class="table table-sm">
+              <thead>
+                <tr>
+                    <th colspan="5">CATEGORIA DAMAS</th>
+                </tr>
+                <tr>
+                    <th>#</th>
+                    <th>Nombres</th>
+                    <th>DNI</th>
+                    <th>Sexo</th>
+                </tr>
+              </thead>
+              <tbody *ngIf="paritcipants.length>0; else emptyContent">
+                <tr *ngFor="let item of paritcipants; let i=index">
+                    <td class="text-center">{{ (i+1) }}</td>
+                    <td>{{ item.empleado }}</td>
+                    <td>{{ item.nro_vale }}</td>
+                    <td>{{ item.nro_vale }}</td>
+                </tr>
+              </tbody>
+              <ng-template #emptyContent>
+                <tbody>
+                <tr>
+                  <th colspan="9" class="text-center">No se encontraron vales registrados</th>
+                </tr>
+                </tbody>
+              </ng-template>
+            </table>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="BÁSQUETBOL" tabIcon="person-outline">
+        </nb-tab>
+        <nb-tab tabTitle="VOLEYBOL" tabIcon="person-outline">
+        </nb-tab>
+    </nb-tabset>
+        
+    </nb-card-body>
+</nb-card>

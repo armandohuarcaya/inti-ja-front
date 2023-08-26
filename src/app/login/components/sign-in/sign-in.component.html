@@ -1,0 +1,94 @@
+<!-- <nb-card style="border-radius: 3rem;" [nbSpinner]="loading" nbSpinnerSize="tiny" nbSpinnerStatus="primary">
+  <nb-card-header class="text-center" style="font-weight: bold; padding: 0px;">
+    <img src="https://www.pngplay.com/wp-content/uploads/12/User-Avatar-Profile-PNG-Pic-Clip-Art-Background.png" alt="" height="120px">
+  </nb-card-header>
+  <nb-card-body>
+    <form [formGroup]="formHeaders">
+        <div>
+          <label class="label">Email</label>
+          <input type="text" status="info" nbInput fullWidth shape="semi-round" formControlName="email" autocomplete="new-email">
+        </div>
+        <hr>
+        <div>
+          <label class="label">Contraseña</label>
+          <nb-form-field>
+            <input [type]="getInputType()" status="info" nbInput fullWidth shape="semi-round" formControlName="password" autocomplete="new-password">
+            <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+              <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+                [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+              </nb-icon>
+            </button>
+          </nb-form-field>
+        </div>
+      <div class="text-center" *ngIf="!formHeaders.value.success">
+        <br>
+        <nb-alert outline="danger" style="font-size: 10px;">{{formHeaders.value.messageResponse}}</nb-alert>
+      </div>
+    </form>
+  </nb-card-body>
+  <nb-card-footer class="text-center">
+    <div style="text-align: left; padding-top: 0px;">
+      <button nbButton size="tiny" status="info" shape="semi-round" ghost
+      (click)="typesChange()">
+        <nb-icon icon="people"></nb-icon>Registrar
+      </button>
+      <button nbButton size="tiny" status="warning" shape="semi-round" ghost
+      (click)="recoveryChange()">
+        <nb-icon icon="sync-outline"></nb-icon>Recuperar contraseña
+      </button>
+    </div><br>
+    <button nbButton size="tiny" status="primary" shape="semi-round" (click)="loginSignIn()" [disabled]="formHeaders.invalid"
+      [nbSpinner]="loading">Ingresar</button>
+
+  </nb-card-footer>
+</nb-card> -->
+<div >
+  <div class="text-center" style="padding: 0px;">
+    <img src="https://uvoc.com.ve/wp-content/uploads/Isolated_Warm_Back-Trans.png?thumbnail=original&1506357338" alt="" height="120px">
+  </div>
+  <div>
+    <form [formGroup]="formHeaders">
+      <!-- <div>
+        <label class="label" style="color: white; font-weight: bold;">Correo</label>
+        <input type="text" status="info" nbInput fullWidth shape="semi-round" formControlName="email" autocomplete="new-email" placeholder="Correo">
+      </div> -->
+      <div>
+        <label class="label" style="color: white; font-weight: bold;">Usuario</label>
+        <input type="text" status="info" nbInput fullWidth shape="semi-round" formControlName="name" autocomplete="new-name" placeholder="Usuario">
+      </div>
+      <hr>
+      <div>
+        <label class="label" style="color: white; font-weight: bold;">Contraseña</label>
+        <nb-form-field>
+          <input [type]="getInputType()" status="info" nbInput fullWidth shape="semi-round" formControlName="password" autocomplete="new-password" placeholder="Contraseña">
+          <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+            <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'" pack="eva"
+              [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+            </nb-icon>
+          </button>
+        </nb-form-field>
+      </div>
+    <div class="text-center" *ngIf="!formHeaders.value.success">
+      <br>
+      <nb-alert status="danger" style="font-size: 10px;">{{formHeaders.value.messageResponse}}</nb-alert>
+    </div>
+  </form>
+  </div>
+  <div class="text-center">
+    <br>
+    
+    <button nbButton size="small" status="primary" shape="semi-round" (click)="loginSignIn()" [disabled]="formHeaders.invalid"
+      [nbSpinner]="loading">Ingresar</button>
+      <!-- <br><br>
+      <div style="text-align: right; padding-top: 0px;">
+        <button nbButton size="tiny" status="info" shape="semi-round"
+        (click)="typesChange()">
+          <nb-icon icon="people"></nb-icon>Registrar
+        </button>
+        <button nbButton size="tiny" status="warning" shape="semi-round"
+        (click)="recoveryChange()">
+          <nb-icon icon="sync-outline"></nb-icon>Cambiar contraseña
+        </button>
+      </div> -->
+  </div>
+</div>
