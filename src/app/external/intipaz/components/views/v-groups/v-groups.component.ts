@@ -28,17 +28,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png',
+            logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
@@ -49,17 +49,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go',
+            logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti'
           },
@@ -70,17 +70,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'MU', // MUJERES
         equipeGrupo: [
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
@@ -91,17 +91,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'MU', // MUJERES
         equipeGrupo: [
           {
-            logo: 'https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go',
+            logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png',
+            logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
@@ -124,17 +124,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png',
+            logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
@@ -145,17 +145,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go',
+            logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti'
           },
@@ -166,22 +166,22 @@ export class VGroupsComponent implements OnInit {
         categoria: 'MU', // MUJERES
         equipeGrupo: [
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
@@ -205,17 +205,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png',
+            logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
@@ -226,17 +226,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'VA', // VARONES
         equipeGrupo: [
           {
-            logo: 'https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go',
+            logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
@@ -247,17 +247,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'MU', // MUJERES
         equipeGrupo: [
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9CWpbXmLsWq6ZleV5lbmR0uH2gOxcL5NspnID7IRbk5J6xJu2sf4QcqDgK5qiYr6Avo&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIDl54dUPR_XFvoTeh5zNr5dLnaBxwJ9xz1tO3QWYmdIMudOX1obzp6DgXZuepDXg97Dk&usqp=CAU',
+            logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://st2.depositphotos.com/1277743/5804/v/450/depositphotos_58044913-stock-illustration-friends-icon-design.jpg',
+            logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti'
           },
@@ -268,17 +268,17 @@ export class VGroupsComponent implements OnInit {
         categoria: 'MU', // MUJERES
         equipeGrupo: [
           {
-            logo: 'https://companieslogo.com/img/orig/VC2.SI-e8a8a136.png?t=1648748290',
+            logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://seeklogo.com/images/J/jireh-design-logo-133B965000-seeklogo.com.png',
+            logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti'
           },
           {
-            logo: 'https://media.licdn.com/dms/image/C4E03AQE2r_sq9KX3Zg/profile-displayphoto-shrink_200_200/0/1516948664316?e=1697673600&v=beta&t=o8Lelu5psRbUz75yVsvpQoMXK5UzdMbAuq7APzvl9go',
+            logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti'
           },

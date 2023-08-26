@@ -43,7 +43,7 @@ const routes: Routes = [
     },
     {
      path: '',
-     redirectTo: 'login',
+     redirectTo: 'intipaz',
      pathMatch: 'full',
     },
     //  {
