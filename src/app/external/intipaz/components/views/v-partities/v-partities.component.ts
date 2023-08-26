@@ -26,6 +26,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
@@ -44,6 +45,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -62,6 +64,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -80,6 +83,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -98,6 +102,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -116,6 +121,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -134,6 +140,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -152,6 +159,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -170,6 +178,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -188,6 +197,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -206,6 +216,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -224,6 +235,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
@@ -254,6 +266,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
@@ -272,6 +285,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -290,6 +304,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -308,6 +323,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -326,6 +342,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -344,6 +361,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -362,6 +380,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -380,6 +399,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -398,6 +418,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -416,6 +437,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -434,6 +456,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -452,6 +475,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
@@ -483,6 +507,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
@@ -501,6 +526,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -519,6 +545,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -537,6 +564,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -555,6 +583,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -573,6 +602,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
@@ -591,6 +621,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -609,6 +640,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -627,6 +659,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -645,6 +678,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -663,6 +697,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -681,6 +716,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
+        finalizo: 'N',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
