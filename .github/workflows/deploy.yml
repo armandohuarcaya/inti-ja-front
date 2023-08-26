@@ -1,0 +1,69 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+
+name: ElIntiJA Frontend CI/CD | Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+
+      - name: Install dependencies
+        run: npm install --force
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+
+      - name: Clear directory html
+        run: ssh staging 'rm -rf /home/${{ secrets.SSH_USER }}/docker/nginx/html/*'
+
+      - name: Install rsync
+        run: sudo apt-get install rsync -y
+
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@5.2.1
+        with:
+          switches: -ravz --delete
+          path: dist/inti-ja-front/*
+          remote_path: /home/${{ secrets.SSH_USER }}/docker/nginx/html
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Restart docker service
+        run: ssh staging 'docker stop nginx && docker start nginx'
+
+      - name: Verify that the service has been restarted
+        run: ssh staging 'sleep 60 && curl --fail http://localhost:80/ || exit 1' # Si la petición falla, el paso de verificación falla
