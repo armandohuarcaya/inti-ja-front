@@ -507,7 +507,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'EP',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
