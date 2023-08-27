@@ -48,10 +48,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -75,10 +71,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -100,10 +92,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -135,10 +123,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -162,10 +146,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -187,10 +167,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -222,10 +198,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -249,10 +221,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -274,10 +242,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -309,10 +273,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -336,10 +296,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -361,10 +317,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -408,10 +360,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -435,10 +383,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -460,10 +404,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -495,10 +435,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -522,10 +458,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -547,10 +479,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -582,10 +510,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -607,10 +531,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -636,10 +556,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -661,10 +577,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -709,10 +621,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -736,10 +644,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -761,10 +665,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -796,10 +696,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -823,10 +719,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -848,10 +740,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -883,10 +771,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -910,10 +794,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -935,10 +815,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
@@ -970,10 +846,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -997,10 +869,6 @@ export class VTablePositionComponent implements OnInit {
                 partido: '2',
                 estado: ''
               },
-              {
-                partido: '3',
-                estado: ''
-              },
             ]
           },
           {
@@ -1022,10 +890,6 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
-              },
-              {
-                partido: '3',
                 estado: ''
               },
             ]
