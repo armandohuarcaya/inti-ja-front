@@ -526,26 +526,26 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'EP',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '1',
           },
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
@@ -557,14 +557,14 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/orion.png',
             equipo: 'GP Los amigos del Inti',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -576,14 +576,14 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'EP',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
