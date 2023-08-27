@@ -507,13 +507,13 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'EP',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '1',
+            puntos: '2',
           },
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -526,7 +526,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'EP',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
