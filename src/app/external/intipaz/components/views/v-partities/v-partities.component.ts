@@ -513,7 +513,7 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '1',
           },
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
