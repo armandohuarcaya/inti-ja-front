@@ -66,4 +66,4 @@ jobs:
         run: ssh staging 'docker stop nginx && docker start nginx'
 
       - name: Verify that the service has been restarted
-        run: ssh staging 'sleep 60 && curl --fail http://localhost:80/ || exit 1' # Si la petición falla, el paso de verificación falla
+        run: ssh staging 'sleep 60 && curl --fail https://localhost:80/ || exit 1' # Si la petición falla, el paso de verificación falla
