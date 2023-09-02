@@ -39,7 +39,7 @@
                 </div>
             </div>
         </nb-tab>
-        <nb-tab tabTitle="BÁSQUET" [active]="false" [disabled]="true">
+        <nb-tab tabTitle="BÁSQUET" [active]="true">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle pressed (click)="selectCategoryBasquet('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </nb-tab>
-        <nb-tab tabTitle="VOLEY" [active]="true">
+        <nb-tab tabTitle="VOLEY" [active]="false">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle pressed (click)="selectCategoryVoley('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
