@@ -266,13 +266,13 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'S',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jireh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
