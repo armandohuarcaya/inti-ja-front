@@ -297,7 +297,7 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti',
-            puntos: '4',
+            puntos: '5',
           },
         ]
       },
