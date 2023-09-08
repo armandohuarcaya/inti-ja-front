@@ -1,6 +1,6 @@
 <div class="table-responsive">
     <nb-tabset fullWidth>
-        <nb-tab tabTitle="FÚTSAL" [active]="false" [disabled]="true">
+        <nb-tab tabTitle="FÚTSAL" [active]="true">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle pressed (click)="selectCategoryFutsal('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
@@ -14,8 +14,8 @@
                     <div *ngFor="let item of dataFut;let i = index" [class]="dataFut.length > 1 ? 'col-md-6' : 'col-md-12'">
                         <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
                             <nb-card-header  style="position: relative;">
-                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'EP' ? 'En Proceso ....' : 'Finalizado'" 
-                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'EP' ? 'warning' : 'success'" position="top right">
+                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'J' ? 'JUGANDO ....' : 'Finalizado'" 
+                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'J' ? 'warning' : 'success'" position="top right">
                                 </nb-badge>
                                {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
                             </nb-card-header>
@@ -39,7 +39,7 @@
                 </div>
             </div>
         </nb-tab>
-        <nb-tab tabTitle="BÁSQUET" [active]="true">
+        <nb-tab tabTitle="BÁSQUET">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle pressed (click)="selectCategoryBasquet('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
@@ -53,8 +53,8 @@
                     <div *ngFor="let item of dataBasq;let i = index" [class]="dataBasq.length > 1 ? 'col-md-6' : 'col-md-12'">
                         <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
                             <nb-card-header  style="position: relative;">
-                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'EP' ? 'En Proceso ....' : 'Finalizado'" 
-                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'EP' ? 'warning' : 'success'" position="top right">
+                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'J' ? 'JUGANDO ....' : 'Finalizado'" 
+                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'J' ? 'warning' : 'success'" position="top right">
                                 </nb-badge>
                                {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
                             </nb-card-header>
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </nb-tab>
-        <nb-tab tabTitle="VOLEY" [active]="false">
+        <nb-tab tabTitle="VOLEY">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle pressed (click)="selectCategoryVoley('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
@@ -92,8 +92,8 @@
                     <div *ngFor="let item of dataVoley;let i = index" [class]="dataVoley.length > 1 ? 'col-md-6' : 'col-md-12'">
                         <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
                             <nb-card-header  style="position: relative;">
-                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'EP' ? 'En Proceso ....' : 'Finalizado'" 
-                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'EP' ? 'warning' : 'success'" position="top right">
+                                <nb-badge [text]="item.finalizo === 'N' ? 'Pendiente' : item.finalizo === 'J' ? 'JUGANDO ....' : 'Finalizado'" 
+                                    [status]="item.finalizo === 'N' ? 'danger' : item.finalizo === 'J' ? 'warning' : 'success'" position="top right">
                                 </nb-badge>
                                {{i+1}}). {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
                             </nb-card-header>
