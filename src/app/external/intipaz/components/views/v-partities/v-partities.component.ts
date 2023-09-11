@@ -26,13 +26,13 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '1',
           },
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -45,7 +45,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
@@ -57,14 +57,14 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
@@ -83,13 +83,13 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '6',
           },
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -102,7 +102,7 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/orion.png',
@@ -114,45 +114,45 @@ export class VPartitiesComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '6',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '3',
           },
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jiréh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '2',
           },
         ]
       },
@@ -342,57 +342,57 @@ export class VPartitiesComponent implements OnInit {
       {
         grupo: 'GRUPO A',
         categoria: 'VA',
-        finalizo: 'J',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '13',
           },
           {
             logo: 'assets/imgs/logo-grupo/JehovaJireh.png',
             equipo: 'GP Jehová Jireh',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '3',
           },
         ]
       },
       {
         grupo: 'GRUPO A',
         categoria: 'MU',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '5',
           },
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '7',
           },
         ]
       },
       {
         grupo: 'GRUPO B',
         categoria: 'VA',
-        finalizo: 'N',
+        finalizo: 'F',
         equipeGrupo: [
           {
             logo: 'assets/imgs/logo-grupo/HOREB.jpg',
             equipo: 'GP Horeb',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '16',
           },
           {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            puntos: '0',
+            puntos: '15',
           },
         ]
       },
