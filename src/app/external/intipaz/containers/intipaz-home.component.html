@@ -14,7 +14,8 @@
                             <button nbButtonToggle (click)="selectOption('grupos')"><nb-icon icon="people-outline" status="success"></nb-icon>&nbsp; GRUPOS</button>
                             <!-- <button nbButtonToggle (click)="selectOption('sorteos')"><nb-icon icon="globe-outline" status="success"></nb-icon>&nbsp; SORTEOS</button> -->
                             <button nbButtonToggle (click)="selectOption('partidos')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; PARTIDOS</button>
-                            <button nbButtonToggle (click)="selectOption('tabla-posicion')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; POSICIÓN</button>
+                            <button nbButtonToggle (click)="selectOption('tabla-posicion')"><nb-icon icon="bar-chart-outline" status="success"></nb-icon>&nbsp; POSICIÓN</button>
+                            <button nbButtonToggle (click)="selectOption('estadisticas')"><nb-icon icon="trending-up-outline" status="success"></nb-icon>&nbsp; ESTADÍSTICAS</button>
                             <!-- <button nbButtonToggle (click)="selectOption('organigrama')"><nb-icon icon="swap-outline" status="success"></nb-icon>&nbsp; FASES</button> -->
                         </nb-button-group>
                     </div>
@@ -35,6 +36,9 @@
                     </span>
                     <span *ngSwitchCase="'organigrama'" class="text-center">
                         <app-v-organigrama></app-v-organigrama>
+                    </span>
+                    <span *ngSwitchCase="'estadisticas'">
+                        <app-v-stadistics></app-v-stadistics>
                     </span>
                     <!-- <span *ngSwitchDefault>
                     </span> -->

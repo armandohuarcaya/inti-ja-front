@@ -13,6 +13,7 @@ import { MCotegoriasComponent } from './components/modals/m-cotegorias/m-cotegor
 import { VTablePositionComponent } from './components/views/v-table-position/v-table-position.component';
 import { VPartitiesComponent } from './components/views/v-partities/v-partities.component';
 import { VOrganigramaComponent } from './components/views/v-organigrama/v-organigrama.component';
+import { VStadisticsComponent } from './components/views/v-stadistics/v-stadistics.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { VOrganigramaComponent } from './components/views/v-organigrama/v-organi
     MCotegoriasComponent,
     VTablePositionComponent,
     VPartitiesComponent,
-    VOrganigramaComponent
+    VOrganigramaComponent,
+    VStadisticsComponent
   ],
   imports: [
     CommonModule,
