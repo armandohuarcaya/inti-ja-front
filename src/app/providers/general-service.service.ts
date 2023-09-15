@@ -6,7 +6,7 @@ import { EntityDataService, IResponse, END_POINTS } from '../providers/utils';
 @Injectable()
 export class GeneralService extends EntityDataService<IResponse> {
     constructor(protected override httpClient: HttpClient) {
-        super(httpClient, END_POINTS.good);
+        super(httpClient, END_POINTS.elinti);
     }
 
     public nameAll$(serviceName: any): Observable<IResponse> {

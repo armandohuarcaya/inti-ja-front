@@ -31,23 +31,23 @@ export class ScaffoldComponent implements OnInit {
           pathMatch: "prefix",
         },
         {
-          title: "Diciplinas & Categoría",
+          title: "Intipaz",
           icon: "sync-outline",
-          link: "/pages/settings/dicipline-category",
+          link: "/pages/settings/intipaz",
           pathMatch: "prefix",
         },
-        {
-          title: "Grupos",
-          icon: "sync-outline",
-          link: "/pages/settings/groups",
-          pathMatch: "prefix",
-        },
-        {
-          title: "Equipos",
-          icon: "sync-outline",
-          link: "/pages/settings/equares",
-          pathMatch: "prefix",
-        },
+        // {
+        //   title: "Grupos",
+        //   icon: "sync-outline",
+        //   link: "/pages/settings/groups",
+        //   pathMatch: "prefix",
+        // },
+        // {
+        //   title: "Equipos",
+        //   icon: "sync-outline",
+        //   link: "/pages/settings/equares",
+        //   pathMatch: "prefix",
+        // },
       ],
     },
     {
@@ -76,6 +76,7 @@ export class ScaffoldComponent implements OnInit {
     //   if (res.success) {
     //     localStorage.removeItem('user');
     //     setTimeout(() => {
+          localStorage.removeItem('autorize');
           this.router.navigate(['/login']);
     //     }, 100);
     //   }

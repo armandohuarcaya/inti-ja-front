@@ -1,0 +1,32 @@
+<div class="scrollModal" style="width: 800px;">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <nb-card status="warning" (click)="closeModal('FUTSAL')" style="cursor: pointer;" class="shadow">
+                <nb-card-header style="font-size: 12px;">
+                  <img src="https://static.vecteezy.com/system/resources/previews/010/252/106/original/soccer-ball-is-a-sport-equipment-file-free-png.png" alt="" height="45">
+                   FÚTSAL
+                </nb-card-header>
+            </nb-card>
+        </div>
+        <div class="col-md-4">
+            <nb-card status="warning" (click)="closeModal('BASQUET')" style="cursor: pointer;" class="shadow">
+                <nb-card-header style="font-size: 12px;">
+                    <img src="https://www.pngplay.com/wp-content/uploads/6/Real-Basketball-PNG-HD-Quality.png" alt="" height="45">
+                    BÁSQUETBOL
+                </nb-card-header>
+            </nb-card>
+        </div>
+        <div class="col-md-4">
+            <nb-card status="warning" (click)="closeModal('VOLEY')" style="cursor: pointer;" class="shadow">
+                <nb-card-header style="font-size: 12px;">
+                    <img src="https://www.pngmart.com/files/4/Volleyball-PNG-Free-Download.png" alt="" height="45">
+                    VOLEYBOL
+                </nb-card-header>
+            </nb-card>
+        </div>
+    </div>
+    <br>
+    <div class="text-center">
+        <button nbButton size="small" (click)="closeModal('close')" >Cerrar</button>
+    </div>
+</div>

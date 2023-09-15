@@ -6,12 +6,12 @@ export const environment = {
     authStrategy: {
         name: 'oauth',
         clientId: '2',
-        baseEndpoint: API.good.local + '/oauth/token',
+        baseEndpoint: API.inti.local + '/oauth/token',
         redirectUri: `${window.location.origin}/oauth/callback`,
         success: '/pages/dashboard'
     },
     apiUrls: {
-        good: API.good.local,
+        inti: API.inti.local,
     },
     shellApp: `${window.location.origin}`,
 };

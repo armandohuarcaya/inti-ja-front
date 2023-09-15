@@ -1,0 +1,38 @@
+<div [nbSpinner]="loading">
+    <form [formGroup]="formHeaders">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="label">Periodo</label><br>
+                <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo">
+                    <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                        {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-5"></div>
+            <div class="col-md-4">
+                <label class="label"></label><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button nbButton size="small" status="warning" hero fullWidth (click)="filters()"><nb-icon icon="funnel"></nb-icon> Filtrar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button nbButton size="small" status="primary" hero fullWidth><nb-icon icon="plus"></nb-icon> Crear equipo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="conten text-center">
+        <div *ngFor="let item of data" class="child">
+            <nb-card status="primary" style="cursor: pointer;" class="shadow">
+                <nb-card-header class="text-center">
+                    <img [src]="item.logo" alt="" height="75"><br><br>
+                    <strong>{{item.nombre}}</strong><br>
+                    <label class="label" style="color: greenyellow;">{{item.iglesia}}</label>
+                </nb-card-header>
+            </nb-card>
+        </div>
+    </div>
+</div>

@@ -15,8 +15,13 @@ export class Auth2Guard implements CanActivate {
     }
 
     canActivate(): Observable<boolean> {
-        let valid:any = true;
-        
+        let valid:any = false;
+        const valida:any = localStorage.getItem('autorize');
+        if (valida) {
+            valid = true;
+        } else {
+            this.router.navigate(['/login']);
+        }
         // const user:any = localStorage.getItem('user');
         // if (user) {
         //   const userObject = JSON.parse(user);

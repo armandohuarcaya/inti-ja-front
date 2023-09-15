@@ -1,0 +1,293 @@
+<div [nbSpinner]="loading">
+    <form [formGroup]="formHeaders">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="label">Periodo</label><br>
+                <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo">
+                    <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                        {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label">Diciplina</label><br>
+                <nb-select fullWidth size="small" formControlName="id_diciplina" placeholder="Selecciona diciplina">
+                    <nb-option *ngFor="let item of diciplinas" [value]="item.id_diciplina" (click)="changeDiciplina(item)">
+                        {{item.nombre}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label">Categoría</label><br>
+                <nb-select fullWidth size="small" formControlName="id_categoria" placeholder="Selecciona categoría">
+                    <nb-option value="">Todos</nb-option>
+                    <nb-option *ngFor="let item of categorias" [value]="item.id_categoria">
+                        {{item.nombre}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label"></label><br>
+                <button nbButton size="small" status="warning" hero fullWidth (click)="filters()"><nb-icon icon="funnel"></nb-icon> Filtrar</button>
+                <!-- <div class="row">
+                    <div class="col-md-6">
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <button nbButton size="small" status="primary" hero fullWidth><nb-icon icon="plus"></nb-icon> Crear grupo</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </form>
+    <hr>
+    <div class="row">
+        <div *ngFor="let item of data;let i = index" class="col-md-6">
+            <nb-card [status]="item.categoria === 'Varones' ? 'info' : 'danger'">
+                <nb-card-header>
+                    {{item.grupo_categoria}}
+                </nb-card-header>
+                <nb-card-body>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Equipo</th>
+                                    <th>PJ</th>
+                                    <th>G</th>
+                                    <th>E</th>
+                                    <th>P</th>
+                                    <th>GF</th>
+                                    <th>GC</th>
+                                    <th>DG</th>
+                                    <th>Pts</th>
+                                    <th>Partidos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let det of item?.data; let ik = index">
+                                    <td style="font-size: 17px; font-weight: bold;"[ngStyle]="{'color': (ik+1) < 3 ? '#00d68f' : ''}">{{ik+1}}</td>
+                                    <td><img [src]="det.logo" alt="" height="40"></td>
+                                    <td style="font-size: 17px;">{{det.equipo}}</td>
+                                    <td style="font-size: 15px;">{{det.partido_jugado}}</td>
+                                    <td style="font-size: 15px;">{{det.ganado}}</td>
+                                    <td style="font-size: 15px;">{{det.empate}}</td>
+                                    <td style="font-size: 15px;">{{det.perdido}}</td>
+                                    <td style="font-size: 15px;">{{det.goles_favor}}</td>
+                                    <td style="font-size: 15px;">{{det.goles_contra}}</td>
+                                    <td style="font-size: 15px;" [ngStyle]="{'color': det.diferencia_goles < 0 ? 'red' : ''}">{{det.diferencia_goles}}</td>
+                                    <td style="font-size: 15px;">{{det.puntos}}</td>
+                                    <td class="d-flex">
+                                        <div *ngFor="let par of det?.partidos" >
+                                            <nb-icon *ngIf="par.partido === 'G'" icon="checkmark-circle-2-outline" status="success"></nb-icon>
+                                            <nb-icon *ngIf="par.partido === 'E'" icon="minus-circle-outline" status="basic"></nb-icon>
+                                            <nb-icon *ngIf="par.partido === 'P'" icon="close-circle-outline" status="danger"></nb-icon>
+                                            <nb-icon *ngIf="par.partido === ''" icon="radio-button-off-outline" status="basic"></nb-icon>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="table-responsive">
+    <nb-tabset fullWidth>
+        <nb-tab tabTitle="FÚTSAL">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryFutsal('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryFutsal('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryFutsal('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataFut;let i = index" [class]="dataFut.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header>
+                                {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Equipo</th>
+                                                <th>PJ</th>
+                                                <th>G</th>
+                                                <th>E</th>
+                                                <th>P</th>
+                                                <th>GF</th>
+                                                <th>GC</th>
+                                                <th>DG</th>
+                                                <th>Pts</th>
+                                                <th>Partidos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let det of item?.equipeGrupo; let ik = index">
+                                                <td style="font-size: 17px;">{{ik+1}}</td>
+                                                <td><img [src]="det.logo" alt="" height="40"></td>
+                                                <td style="font-size: 17px;">{{det.equipo}}</td>
+                                                <td style="font-size: 15px;">{{det.partido_jugado}}</td>
+                                                <td style="font-size: 15px;">{{det.ganado}}</td>
+                                                <td style="font-size: 15px;">{{det.empate}}</td>
+                                                <td style="font-size: 15px;">{{det.perdido}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_favor}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_contra}}</td>
+                                                <td style="font-size: 15px;">{{det.diferencia_goles}}</td>
+                                                <td style="font-size: 15px;">{{det.puntos}}</td>
+                                                <td class="d-flex">
+                                                    <div *ngFor="let par of det?.partidos" >
+                                                        <nb-icon *ngIf="par.estado === '1'" icon="checkmark-circle-2-outline" status="success"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '2'" icon="minus-circle-outline" status="basic"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '3'" icon="close-circle-outline" status="danger"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === ''" icon="radio-button-off-outline" status="basic"></nb-icon>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+        <nb-tab tabTitle="BÁSQUET">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryBasquet('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryBasquet('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryBasquet('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataBasq;let i = index" [class]="dataBasq.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header>
+                                {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Equipo</th>
+                                                <th>PJ</th>
+                                                <th>G</th>
+                                                <th>E</th>
+                                                <th>P</th>
+                                                <th>GF</th>
+                                                <th>GC</th>
+                                                <th>DG</th>
+                                                <th>Pts</th>
+                                                <th>Partidos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let det of item?.equipeGrupo; let ik = index">
+                                                <td style="font-size: 17px;">{{ik+1}}</td>
+                                                <td><img [src]="det.logo" alt="" height="40"></td>
+                                                <td style="font-size: 17px;">{{det.equipo}}</td>
+                                                <td style="font-size: 15px;">{{det.partido_jugado}}</td>
+                                                <td style="font-size: 15px;">{{det.ganado}}</td>
+                                                <td style="font-size: 15px;">{{det.empate}}</td>
+                                                <td style="font-size: 15px;">{{det.perdido}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_favor}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_contra}}</td>
+                                                <td style="font-size: 15px;">{{det.diferencia_goles}}</td>
+                                                <td style="font-size: 15px;">{{det.puntos}}</td>
+                                                <td class="d-flex">
+                                                    <div *ngFor="let par of det?.partidos" >
+                                                        <nb-icon *ngIf="par.estado === '1'" icon="checkmark-circle-2-outline" status="success"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '2'" icon="minus-circle-outline" status="basic"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '3'" icon="close-circle-outline" status="danger"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === ''" icon="radio-button-off-outline" status="basic"></nb-icon>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+        <nb-tab tabTitle="VOLEY">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle pressed (click)="selectCategoryVoley('TODOS')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle (click)="selectCategoryVoley('VA')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; VARONES</button>
+                    <button nbButtonToggle (click)="selectCategoryVoley('MU')"><nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; MUJERES</button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of dataVoley;let i = index" [class]="dataVoley.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'VA' ? 'info' : 'danger'">
+                            <nb-card-header>
+                                {{item.grupo}} - {{item.categoria === 'VA' ? 'Varones' : 'Mujeres'}}
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="3">Equipo</th>
+                                                <th>PJ</th>
+                                                <th>G</th>
+                                                <th>E</th>
+                                                <th>P</th>
+                                                <th>GF</th>
+                                                <th>GC</th>
+                                                <th>DG</th>
+                                                <th>Pts</th>
+                                                <th>Partidos</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let det of item?.equipeGrupo; let ik = index">
+                                                <td style="font-size: 17px;">{{ik+1}}</td>
+                                                <td><img [src]="det.logo" alt="" height="40"></td>
+                                                <td style="font-size: 17px;">{{det.equipo}}</td>
+                                                <td style="font-size: 15px;">{{det.partido_jugado}}</td>
+                                                <td style="font-size: 15px;">{{det.ganado}}</td>
+                                                <td style="font-size: 15px;">{{det.empate}}</td>
+                                                <td style="font-size: 15px;">{{det.perdido}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_favor}}</td>
+                                                <td style="font-size: 15px;">{{det.goles_contra}}</td>
+                                                <td style="font-size: 15px;">{{det.diferencia_goles}}</td>
+                                                <td style="font-size: 15px;">{{det.puntos}}</td>
+                                                <td class="d-flex">
+                                                    <div *ngFor="let par of det?.partidos" >
+                                                        <nb-icon *ngIf="par.estado === '1'" icon="checkmark-circle-2-outline" status="success"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '2'" icon="minus-circle-outline" status="basic"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === '3'" icon="close-circle-outline" status="danger"></nb-icon>
+                                                        <nb-icon *ngIf="par.estado === ''" icon="radio-button-off-outline" status="basic"></nb-icon>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+    </nb-tabset>
+</div> -->

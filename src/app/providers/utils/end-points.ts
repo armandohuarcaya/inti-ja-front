@@ -1,18 +1,21 @@
 import { environment } from 'src/environments/environment';
 
-const good:any = environment.apiUrls.good;
+const inti:any = environment.apiUrls.inti;
 export const END_POINTS = {
-  good: good + '/api',
+  elinti: inti + '/api',
   comun: {
     base: 'comun',
   },
-  personal_performance: { // Proyecto
-    comun: 'comun/personal-performance',
+  el_inti: { // Proyecto
+    filterComun: 'filters-comun',
+    settings: {
+      intipaz: 'settings/intipaz',
+    },
   },
-  contract: { // Proyecto
-    comun: 'comun/contract',
-  },
-  portal: {
-    evaluations: 'workerportal/my-evaluations'
-  }
+  // contract: { // Proyecto
+  //   comun: 'comun/contract',
+  // },
+  // portal: {
+  //   evaluations: 'workerportal/my-evaluations'
+  // }
 };

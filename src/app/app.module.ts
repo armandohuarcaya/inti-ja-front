@@ -33,8 +33,8 @@ import { CoreModule } from './core/core.module';
     CoreModule.forRoot(
       {
         strategyName: environment.authStrategy.name,
-      apiAuth: environment.apiUrls.good,
-      moduleId: environment.module_id,
+        apiAuth: environment.apiUrls.inti,
+        moduleId: environment.module_id,
       }
     )
   ],

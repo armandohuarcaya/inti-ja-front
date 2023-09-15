@@ -11,6 +11,10 @@ const routes: Routes = [
         path: 'users',
         loadChildren: () => import('./users/users.module').then(m => m.UsersModule),
       },
+      {
+        path: 'intipaz',
+        loadChildren: () => import('./intipaz/intipaz.module').then(m => m.IntipazModule),
+      },
     ]
   }
 ];

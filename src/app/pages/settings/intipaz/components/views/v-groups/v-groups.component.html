@@ -1,0 +1,65 @@
+<div [nbSpinner]="loading">
+    <form [formGroup]="formHeaders">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="label">Periodo</label><br>
+                <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo">
+                    <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                        {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label">Diciplina</label><br>
+                <nb-select fullWidth size="small" formControlName="id_diciplina" placeholder="Selecciona diciplina">
+                    <nb-option *ngFor="let item of diciplinas" [value]="item.id_diciplina">
+                        {{item.nombre}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label">Categoría</label><br>
+                <nb-select fullWidth size="small" formControlName="id_categoria" placeholder="Selecciona categoría">
+                    <nb-option value="">Todos</nb-option>
+                    <nb-option *ngFor="let item of categorias" [value]="item.id_categoria">
+                        {{item.nombre}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label"></label><br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <button nbButton size="small" status="warning" hero fullWidth (click)="filters()"><nb-icon icon="funnel"></nb-icon> Filtrar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button nbButton size="small" status="primary" hero fullWidth><nb-icon icon="plus"></nb-icon> Crear grupo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <hr>
+    <div class="row">
+        <div *ngFor="let item of data;let i = index" class="col-md-3">
+            <nb-card [status]="item.categoria === 'Varones' ? 'info' : 'danger'">
+                <nb-card-header>
+                    {{item.grupo_categoria}}
+                </nb-card-header>
+                <nb-card-body>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <tbody>
+                                <tr *ngFor="let det of item?.data; let ik = index">
+                                    <td style="font-size: 17px;">{{ik+1}}</td>
+                                    <td><img [src]="det.logo" alt="" height="40"></td>
+                                    <td style="font-size: 17px;">{{det.equipo}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>

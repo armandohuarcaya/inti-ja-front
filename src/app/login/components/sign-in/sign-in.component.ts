@@ -72,6 +72,7 @@ export class SignInComponent implements OnInit, OnDestroy {
     //     localStorage.setItem('user', item);
     //     setTimeout(() => {
       if (forms.name === 'admin' && forms.password === '123456.') {
+        localStorage.setItem('autorize', JSON.stringify(true));
         this.router.navigate(['/pages/settings/users']);
       }
     //     }, 1000);
