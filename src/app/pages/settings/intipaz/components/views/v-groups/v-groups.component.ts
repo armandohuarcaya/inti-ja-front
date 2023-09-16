@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeneralService } from 'src/app/providers';
 import { END_POINTS } from 'src/app/providers/utils';
+import { MGroupEquipeComponent } from '../../modals/m-group-equipe/m-group-equipe.component';
+import { NbDialogService } from '@nebular/theme';
+import { DialogConfimComponent } from 'src/app/shared/components/dialog-confim/dialog-confim.component';
 
 @Component({
   selector: 'app-v-groups',
@@ -19,7 +22,7 @@ export class VGroupsComponent implements OnInit {
   // dataFut:any = [];
   // dataBasq:any = [];
   // dataVoley:any = [];
-  constructor(private service: GeneralService, private fb: FormBuilder) {}
+  constructor(private service: GeneralService, private fb: FormBuilder, private nbDialogService: NbDialogService) {}
   ngOnInit() {
     this.formFields();
     this.getPeriodos();
@@ -83,6 +86,50 @@ export class VGroupsComponent implements OnInit {
         this.data = res.data || [];
       }, () => this.loading = false, () => this.loading = false);
     }
+  }
+  openGroupsEquipes() {
+    this.nbDialogService.open(MGroupEquipeComponent, {
+      dialogClass: 'dialog-limited-height',
+      context: {
+      },
+      closeOnBackdropClick: false,
+      closeOnEsc: false,
+    })
+    .onClose.subscribe((result:any) => {
+      if (result === 'ok') {
+        this.listGroups();
+      }
+    });
+  }
+  deleteGruoup(item:any) {
+    const serviceName = END_POINTS.el_inti.settings.intipaz + '/group-equipe';
+    this.nbDialogService.open(DialogConfimComponent, {
+      dialogClass: 'dialog-limited-height',
+      context: {
+        tittle: 'ELIMINAR',
+        text: '¿ Estas seguro que deseas eliminar ?',
+        icon: 'trash-outline',
+        colorIcon: 'danger',
+        showCloseButton: true,
+        showCancelButton: true,
+        showConfirmButton: true,
+        confirmButtonColor: 'primary',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No',
+      },
+      closeOnBackdropClick: false,
+      closeOnEsc: false,
+    })
+    .onClose.subscribe((result:any) => {
+      if (result.isConfirmed) {
+          this.loading = true;
+          this.service.deleteNameId$(serviceName, item.id_grupo_equipo).subscribe(r => {
+            if (r.success) {
+              this.listGroups();
+            }
+          }, () => {this.loading = false}, () => {this.loading = false},);
+      }
+    });
   }
 
   // selectCategoryFutsal(value:any) {
