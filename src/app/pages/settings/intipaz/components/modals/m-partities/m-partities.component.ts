@@ -13,7 +13,6 @@ import { DialogConfimComponent } from 'src/app/shared/components/dialog-confim/d
 })
 export class MPartitiesComponent implements OnInit {
   loading: boolean = false;
-  paritcipants:any = [];
   formHeaders:any = FormGroup;
   @Input() filter:any;
   @Input() ordenLegth:number = 0;

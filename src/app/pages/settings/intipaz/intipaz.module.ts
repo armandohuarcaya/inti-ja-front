@@ -16,6 +16,7 @@ import { VStadisticsComponent } from './components/views/v-stadistics/v-stadisti
 import { GeneralService } from 'src/app/providers';
 import { MPartitiesComponent } from './components/modals/m-partities/m-partities.component';
 import { DialogConfimModule } from 'src/app/shared/components/dialog-confim/dialog-confim.module';
+import { MGroupEquipeComponent } from './components/modals/m-group-equipe/m-group-equipe.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { DialogConfimModule } from 'src/app/shared/components/dialog-confim/dial
     VPartitiesComponent,
     VOrganigramaComponent,
     VStadisticsComponent,
-    MPartitiesComponent
+    MPartitiesComponent,
+    MGroupEquipeComponent
   ],
   imports: [
     CommonModule,
