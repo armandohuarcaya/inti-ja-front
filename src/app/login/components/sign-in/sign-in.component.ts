@@ -6,6 +6,7 @@ import { NbAuthResult, NbAuthService } from '@nebular/auth';
 import { Subject, takeUntil } from 'rxjs';
 import { CoreOptions, CORE_OPTIONS } from 'src/app/core/core.options';
 import { GeneralService } from 'src/app/providers';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-sign-in',
@@ -73,7 +74,11 @@ export class SignInComponent implements OnInit, OnDestroy {
     //     setTimeout(() => {
       if (forms.name === 'admin' && forms.password === '123456.') {
         localStorage.setItem('autorize', JSON.stringify(true));
-        this.router.navigate(['/pages/settings/users']);
+        setTimeout(() => {
+          this.router.navigate(['/pages/settings/users']);
+          
+        }, 100);
+       
       }
     //     }, 1000);
     //   console.log(res);

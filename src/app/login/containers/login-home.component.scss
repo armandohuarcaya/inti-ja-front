@@ -1,9 +1,9 @@
-.abs-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-  }
+// .abs-center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     min-height: 100vh;
+//   }
   .found {
     background: linear-gradient(#093d4c, #20819c, #034152, #002e3b);  
     // background-image: url('https://fondosmil.com/fondo/47987.jpg');
@@ -17,7 +17,15 @@
 //   .card-found {
 //     background-image: url('https://fondosmil.com/fondo/47987.jpg');
 //   }
-  ::ng-deep :root {
-      overflow-y: hidden;
-      overflow-x: hidden;
-  }
+  // ::ng-deep :root {
+  //     overflow-y: hidden;
+  //     overflow-x: hidden;
+  // }
+nb-layout-column  {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

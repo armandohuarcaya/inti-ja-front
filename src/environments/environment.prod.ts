@@ -4,12 +4,12 @@ export const environment = {
   authStrategy: {
       name: 'oauth2',
       clientId: 'tp6DXQQjwFHlEPrkilrDDB3rknQqsVctAbjaYQiM',
-      baseEndpoint: 'https://oauth.upeu.edu.pe',
-      redirectUri: 'https://lamb-talent.upeu.edu.pe/personal-performance/oauth2/callback',
-      success: '/personal-performance/pages/dashboard'
+      baseEndpoint: '',
+      redirectUri: '',
+      success: ''
   },
   apiUrls: {
-    good: 'https://good-orders-back.herokuapp.com',
+    inti: 'https://localhost',
   },
-  shellApp: 'https://lamb-talent.upeu.edu.pe/shell',
+  shellApp: '',
 };
