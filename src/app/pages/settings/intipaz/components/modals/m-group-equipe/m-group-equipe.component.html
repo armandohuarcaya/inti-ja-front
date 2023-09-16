@@ -1,0 +1,113 @@
+<nb-card status="primary" class="scrollModal" style="width:500px;" [nbSpinner]="loading">
+    <nb-card-header class="card_header_backgournd">
+      <div class="d-flex align-items-center justify-content-between">
+          <div>
+              <nb-icon icon="people-outline" status="success"></nb-icon>&nbsp;&nbsp;CREAR GRUPO EQUIPO
+          </div>
+          <button nbButton outline status="basic" size="tiny" (click)="closeModal()">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+    </nb-card-header>
+    <nb-card-body>
+        <nb-tabset>
+            <nb-tab tabTitle="Grupo">
+                <form [formGroup]="formHeaders">
+                    <div>
+                        <label class="label">Periodo</label><br>
+                        <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo" (selectedChange)="selectedPeriodo()">
+                            <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                                {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <label class="label">Nombre del grupo</label><br>
+                            <input nbInput fieldSize="small" fullWidth formControlName="nombre">
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <label class="label">Estado</label><br>
+                            <nb-toggle formControlName="estado"></nb-toggle>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+                <div style="text-align: right;">
+                    <button nbButton size="tiny" status="primary" hero [disabled]="formHeaders.invalid" (click)="saveGroups()">Guardar</button>
+                </div>
+                <hr>
+                <div class="row">
+                    <div  *ngFor="let item of grupos; let i = index" class="col-md-6">
+                        <nb-card accent="primary">
+                            <nb-card-header >
+                                {{i+1}}).  {{item.nombre}}
+                            </nb-card-header>
+                        </nb-card>
+                    </div>
+                </div>
+            </nb-tab>
+            <nb-tab tabTitle="Asignar equipo">
+                <form [formGroup]="formHeadersTwo">
+                    <div>
+                        <label class="label">Periodo</label><br>
+                        <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo" (selectedChange)="selectedPeriodo()">
+                            <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                                {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div>
+                        <label class="label">Diciplina</label><br>
+                        <nb-select fullWidth size="small" formControlName="id_diciplina" placeholder="Selecciona diciplina">
+                            <nb-option *ngFor="let item of diciplinas" [value]="item.id_diciplina">
+                                {{item.nombre}}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div>
+                        <label class="label">Categoría</label><br>
+                        <nb-select fullWidth size="small" formControlName="id_categoria" placeholder="Selecciona categoría">
+                            <nb-option *ngFor="let item of categorias" [value]="item.id_categoria">
+                                {{item.nombre}}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div>
+                        <label class="label">Grupos</label><br>
+                        <nb-select fullWidth size="small" formControlName="id_grupo" placeholder="Selecciona grupos">
+                            <nb-option *ngFor="let item of grupos" [value]="item.id_grupo">
+                                {{item.nombre}}
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                </form>
+                <hr>
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th style="width: 1px;">Logo</th>
+                                    <th>Equipo</th>
+                                    <th style="width: 1px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of equipos">
+                                    <td style="width: 1px;" class="text-center"><img [src]="item.logo" alt="" height="30"></td>
+                                    <td>{{item.nombre}}</td>
+                                    <td style="width: 1px;"><nb-checkbox [(ngModel)]="item.checked"></nb-checkbox></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+                    <div style="text-align: right;">
+                        <button nbButton size="tiny" status="primary" hero [disabled]="formHeadersTwo.invalid || validArray.length<=0" (click)="save('GC')">Guardar y continuar</button>&nbsp;
+                        <button nbButton size="tiny" status="primary" hero [disabled]="formHeadersTwo.invalid || validArray.length<=0" (click)="save('GF')">Guardar y finalizar</button>
+                    </div>
+            </nb-tab>
+           </nb-tabset>
+        
+    </nb-card-body>
+</nb-card>
