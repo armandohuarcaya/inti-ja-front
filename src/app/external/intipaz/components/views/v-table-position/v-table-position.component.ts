@@ -779,7 +779,7 @@ export class VTablePositionComponent implements OnInit {
             partido_jugado: '1',
             ganado: '0',
             empate: '0',
-            perdido: '1',
+            perdido: '2',
             goles_favor: '0',
             goles_contra: '0',
             diferencia_goles: '0',
@@ -791,7 +791,7 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
+                estado: '3'
               },
             ]
           },
@@ -799,14 +799,14 @@ export class VTablePositionComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/emaus.png',
             equipo: 'GP Emaús',
             iglesia: 'El Inti',
-            partido_jugado: '1',
-            ganado: '1',
+            partido_jugado: '2',
+            ganado: '2',
             empate: '0',
             perdido: '0',
             goles_favor: '0',
             goles_contra: '0',
             diferencia_goles: '0',
-            puntos: '3',
+            puntos: '6',
             partidos: [
               {
                 partido: '1',
@@ -814,7 +814,7 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
+                estado: '1'
               },
             ]
           },
