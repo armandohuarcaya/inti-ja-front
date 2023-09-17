@@ -851,10 +851,10 @@ export class VTablePositionComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/ElOlam.png',
             equipo: 'GP El Olam',
             iglesia: 'El Inti',
-            partido_jugado: '0',
+            partido_jugado: '2',
             ganado: '0',
             empate: '0',
-            perdido: '0',
+            perdido: '2',
             goles_favor: '0',
             goles_contra: '0',
             diferencia_goles: '0',
@@ -866,7 +866,7 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
+                estado: '3'
               },
             ]
           },
@@ -897,14 +897,14 @@ export class VTablePositionComponent implements OnInit {
             logo: 'assets/imgs/logo-grupo/Migdal.png',
             equipo: 'GP Migdal',
             iglesia: 'El Inti',
-            partido_jugado: '1',
-            ganado: '0',
+            partido_jugado: '2',
+            ganado: '1',
             empate: '0',
             perdido: '1',
             goles_favor: '0',
             goles_contra: '0',
             diferencia_goles: '0',
-            puntos: '0',
+            puntos: '3',
             partidos: [
               {
                 partido: '1',
@@ -912,7 +912,7 @@ export class VTablePositionComponent implements OnInit {
               },
               {
                 partido: '2',
-                estado: ''
+                estado: '1'
               },
             ]
           },
