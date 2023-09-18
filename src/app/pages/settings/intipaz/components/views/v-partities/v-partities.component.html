@@ -70,7 +70,7 @@
                                     <td style="width: 150px;" class="text-center">
                                         <nb-form-field *ngIf="item.finalizado === 'J'">
                                             <button nbPrefix nbButton size="small" status="danger" [disabled]="det.puntos<=0" (click)="resultado(det, 'minus')"><nb-icon  icon="minus-outline"></nb-icon></button>
-                                            <input type="text" nbInput fullWidth fieldSize="small" [value]="det.puntos" [(ngModel)]="det.puntos" class="text-center">
+                                            <input type="text" nbInput fullWidth fieldSize="small" [value]="det.puntos" [(ngModel)]="det.puntos" class="text-center" [readOnly]="true">
                                             <button nbSuffix nbButton size="small" status="success" (click)="resultado(det, 'plus')"><nb-icon  icon="plus-outline"></nb-icon></button>
                                         </nb-form-field>
                                         <span *ngIf="item.finalizado !== 'J'">{{det.puntos}}</span>
