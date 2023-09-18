@@ -9,7 +9,7 @@ export const environment = {
       success: ''
   },
   apiUrls: {
-    inti: 'https://localhost',
+    inti: 'https://elintija.site',
   },
   shellApp: '',
 };
