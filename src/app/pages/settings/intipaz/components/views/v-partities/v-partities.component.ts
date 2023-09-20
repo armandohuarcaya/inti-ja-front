@@ -85,8 +85,8 @@ export class VPartitiesComponent implements OnInit {
       id_categoria: this.formHeaders.value.id_categoria,
       id_fase: this.formHeaders.value.id_fase,
     };
-    this.loading = true;
     if (params.id_periodo && params.id_diciplina && params.id_fase) {
+      this.loading = true;
       this.service.nameParams$(serviceName, params).subscribe((res:any) => {
         this.data = res.data || [];
       }, () => this.loading = false, () => this.loading = false);

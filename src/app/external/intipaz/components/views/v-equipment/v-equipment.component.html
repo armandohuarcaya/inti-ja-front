@@ -1,4 +1,4 @@
-<div class="conten text-center">
+<div class="conten text-center" [nbSpinner]="loading">
     <div *ngFor="let item of data" class="child">
         <nb-card status="primary" style="cursor: pointer;" class="shadow">
             <nb-card-header class="text-center">
