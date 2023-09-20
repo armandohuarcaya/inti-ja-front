@@ -14,6 +14,7 @@ import { VTablePositionComponent } from './components/views/v-table-position/v-t
 import { VPartitiesComponent } from './components/views/v-partities/v-partities.component';
 import { VOrganigramaComponent } from './components/views/v-organigrama/v-organigrama.component';
 import { VStadisticsComponent } from './components/views/v-stadistics/v-stadistics.component';
+import { GeneralService } from 'src/app/providers';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { VStadisticsComponent } from './components/views/v-stadistics/v-stadisti
     IntipazRoutingModule,
     NebularModule,
     NbLayoutModule
-  ]
+  ],
+  providers: [GeneralService]
 })
 export class IntipazModule { }
