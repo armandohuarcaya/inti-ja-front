@@ -82,8 +82,8 @@ export class VTablePositionComponent implements OnInit {
       id_diciplina: this.formHeaders.value.id_diciplina,
       id_categoria: this.formHeaders.value.id_categoria,
     };
-    this.loading = true;
     if (params.id_periodo && params.id_diciplina) {
+      this.loading = true;
       this.service.nameParams$(serviceName, params).subscribe((res:any) => {
         this.data = res.data || [];
         if (this.data.length>0) {

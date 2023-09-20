@@ -1,4 +1,49 @@
-<div class="table-responsive">
+<div [nbSpinner]="loading">
+    <nb-tabset fullWidth (changeTab)="tabDiciplina($event)">
+        <nb-tab *ngFor="let items of diciplinas; let ii = index" [tabTitle]="items.nombre" [active]="ii === 0" [tabId]="items.id_diciplina" style="padding-left: 0px; padding-right: 0px;">
+            <div class="table-responsive text-center">
+                <nb-button-group size="small" shape="round" ghost status="warning">
+                    <button nbButtonToggle [pressed]="formHeaders.value.id_categoria === ''" (click)="selectCategory('')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
+                    <button nbButtonToggle *ngFor="let ito of categorias" (click)="selectCategory(ito)" [pressed]="formHeaders.value.id_categoria === ito.id_categoria">
+                        <nb-icon icon="person-outline" status="success"></nb-icon>&nbsp; {{ito.nombre}}
+                    </button>
+                </nb-button-group>
+            </div>
+            <br>
+            <div>
+                <div class="card-group row">
+                    <div *ngFor="let item of data;let i = index" [class]="data.length > 1 ? 'col-md-6' : 'col-md-12'">
+                        <nb-card [status]="item.categoria === 'Varones' ? 'info' : 'danger'">
+                            <nb-card-header  style="position: relative;">
+                                <nb-badge [text]="item.finalizado === 'N' ? 'Pendiente' : item.finalizado === 'J' ? 'JUGANDO ....' : 'Finalizado'" 
+                                    [status]="item.finalizado === 'N' ? 'danger' : item.finalizado === 'J' ? 'warning' : 'success'" position="top right">
+                                </nb-badge>
+                               {{item.orden}}). {{item.grupo}} - {{item.categoria}}
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        
+                                        <tbody>
+                                            <tr *ngFor="let det of item?.details; let ik = index" style="font-size: 18px !important; font-weight: bold;">
+                                                <!-- <td>{{ik+1}}</td> -->
+                                                <td style="width: 1px;"><img [src]="det.logo" alt="" height="40"></td>
+                                                <td>{{det.equipo}}</td>
+                                                <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
+                    </div>
+                </div>
+            </div>
+        </nb-tab>
+    </nb-tabset>
+</div>
+
+<!-- <div class="table-responsive">
     <nb-tabset fullWidth>
         <nb-tab tabTitle="FÚTSAL" [active]="true">
             <div class="table-responsive text-center">
@@ -22,10 +67,8 @@
                             <nb-card-body>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
-                                        
                                         <tbody>
                                             <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
-                                                <!-- <td>{{ik+1}}</td> -->
                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="40"></td>
                                                 <td>{{det.equipo}}</td>
                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
@@ -61,10 +104,8 @@
                             <nb-card-body>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
-                                        
                                         <tbody>
                                             <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
-                                                <!-- <td>{{ik+1}}</td> -->
                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="40"></td>
                                                 <td>{{det.equipo}}</td>
                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
@@ -100,10 +141,8 @@
                             <nb-card-body>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
-                                        
                                         <tbody>
                                             <tr *ngFor="let det of item?.equipeGrupo; let ik = index" style="font-size: 18px !important; font-weight: bold;">
-                                                <!-- <td>{{ik+1}}</td> -->
                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="40"></td>
                                                 <td>{{det.equipo}}</td>
                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
@@ -118,4 +157,4 @@
             </div>
         </nb-tab>
     </nb-tabset>
-</div>
+</div> -->
