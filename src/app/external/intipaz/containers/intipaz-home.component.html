@@ -23,16 +23,16 @@
             <nb-card-body [class]="['equipos', 'organigrama'].includes(views) ? 'cuerpo' : ''">
                 <span [ngSwitch]="views">
                     <span *ngSwitchCase="'equipos'">
-                        <app-v-equipment [idPeriodo]="id_periodo"></app-v-equipment>
+                        <app-v-equipment *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-equipment>
                     </span>
                     <span *ngSwitchCase="'grupos'">
-                        <app-v-groups [idPeriodo]="id_periodo"></app-v-groups>
+                        <app-v-groups *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-groups>
                     </span>
                     <span *ngSwitchCase="'partidos'">
-                        <app-v-partities [idPeriodo]="id_periodo"></app-v-partities>
+                        <app-v-partities *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo" [idFase]="formHeaders.value.id_fase"></app-v-partities>
                     </span>
                     <span *ngSwitchCase="'tabla-posicion'">
-                        <app-v-table-position [idPeriodo]="id_periodo"></app-v-table-position>
+                        <app-v-table-position *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-table-position>
                     </span>
                     <span *ngSwitchCase="'organigrama'" class="text-center">
                         <app-v-organigrama></app-v-organigrama>
@@ -45,13 +45,37 @@
                 </span>
                 
             </nb-card-body>
-            <!-- <nb-card-footer style="border-radius: 0px; padding: 5px;" [class]="['equipos', 'organigrama'].includes(views) ? 'cuerpo' : ''" class="footerss text-center">
-                <nb-select size="small" placeholder="periodo" status="success">
-                    <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
-                        {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
-                    </nb-option>
-                </nb-select>
-            </nb-card-footer> -->
         </nb-card>
+
+        <!-- PARA PERIRO Y FASES -->
+
+        <button nbButton shape="round" size="small" status="success" class="boton-flotante" (click)="open(dialog)"><nb-icon icon="funnel-outline"></nb-icon></button>
+        <ng-template #dialog let-data let-ref="dialogRef">
+            <nb-card status="primary">
+                <nb-card-header>
+                    Opciones
+                </nb-card-header>
+                <nb-card-body>
+                    <form [formGroup]="formHeaders">
+                        <div>
+                            <label class="label">Periodo</label><br>
+                            <nb-select size="small" fullWidth placeholder="periodo" status="success" formControlName="id_periodo" (selectedChange)="selectPeriodo()">
+                                <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
+                                    {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
+                                </nb-option>
+                            </nb-select>
+                        </div>
+                        <div>
+                            <label class="label">Fase</label><br>
+                            <nb-select size="small" fullWidth placeholder="periodo" status="success" formControlName="id_fase">
+                                <nb-option *ngFor="let item of fases" [value]="item.id_fase">
+                                    {{item.nombre}}
+                                </nb-option>
+                            </nb-select>
+                        </div>
+                    </form>
+                </nb-card-body>
+            </nb-card>
+        </ng-template>
     </nb-layout-column>
 </nb-layout>

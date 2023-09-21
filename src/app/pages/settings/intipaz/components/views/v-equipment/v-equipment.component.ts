@@ -56,8 +56,8 @@ export class VEquipmentComponent implements OnInit {
     const params = {
       id_periodo: this.formHeaders.value.id_periodo,
     };
-    this.loading = true;
     if (params.id_periodo) {
+      this.loading = true;
       this.service.nameParams$(serviceName, params).subscribe((res:any) => {
         this.data = res.data || [];
       }, () => this.loading = false, () => this.loading = false);

@@ -43,8 +43,25 @@ export class VPartitiesComponent implements OnInit {
       this.periodos = res.data || [];
       if (this.periodos.length>0) {
         this.formHeaders.controls['id_periodo'].setValue(this.periodos[0].id_periodo);
+        this.getFases();
         this.getDiciplinas();
-        this.getCategorias();
+      }
+    });
+  }
+  selectPeriodo() {
+    this.formHeaders.controls['id_fase'].setValue('');
+    this.fases = [];
+    this.getFases();
+  }
+  getFases() {
+    const serviceName = END_POINTS.el_inti.filterComun + '/fases';
+    const params = {
+      id_periodo: this.formHeaders.value.id_periodo,
+    };
+    this.service.nameParams$(serviceName, params).subscribe((res:any) => {
+      this.fases = res.data || [];
+      if (this.fases.length>0) {
+        this.formHeaders.controls['id_fase'].setValue(this.fases[0].id_fase);
       }
     });
   }
@@ -54,24 +71,18 @@ export class VPartitiesComponent implements OnInit {
       this.diciplinas = res.data || [];
       if (this.diciplinas.length>0) {
         this.formHeaders.controls['id_diciplina'].setValue(this.diciplinas[0].id_diciplina);
-        this.getFases();
+        this.getCategorias();
       }
     });
   }
-  getFases() {
-    const serviceName = END_POINTS.el_inti.filterComun + '/fases';
-    this.service.nameAll$(serviceName).subscribe((res:any) => {
-      this.fases = res.data || [];
-      if (this.fases.length>0) {
-        this.formHeaders.controls['id_fase'].setValue(this.fases[0].id_fase);
-        this.listPartities();
-      }
-    });
-  }
+ 
   getCategorias() {
     const serviceName = END_POINTS.el_inti.filterComun + '/categories';
     this.service.nameAll$(serviceName).subscribe((res:any) => {
       this.categorias = res.data || [];
+      if (this.categorias.length>0) {
+        this.listPartities();
+      }
     });
   }
   filters() {
