@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeneralService } from 'src/app/providers';
 import { END_POINTS } from 'src/app/providers/utils';
@@ -8,7 +8,7 @@ import { END_POINTS } from 'src/app/providers/utils';
   templateUrl: './v-partities.component.html',
   styleUrls: ['./v-partities.component.scss']
 })
-export class VPartitiesComponent implements OnInit {
+export class VPartitiesComponent implements OnInit, OnChanges {
   // dataFut:any = [];
   // dataBasq:any = [];
   // dataVoley:any = [];
@@ -16,12 +16,20 @@ export class VPartitiesComponent implements OnInit {
   formHeaders:any = FormGroup;
   loading:boolean = false;
   @Input() idPeriodo:any;
-  idFase:number = 1;
+  @Input() idFase:any;
   diciplinas:any = [];
   categorias:any = [];
   data:any = [];
 
   constructor(private service: GeneralService, private fb: FormBuilder) {}
+
+  ngOnChanges():void {
+    if (this.idPeriodo || this.idFase) {
+      setTimeout(() => {
+        this.listPartities();
+      }, 100);
+    }
+  }
 
   ngOnInit() {
     // this.listDataFutbol();

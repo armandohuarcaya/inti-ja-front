@@ -1,7 +1,8 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { NbMenuItem } from '@nebular/theme';
+import { NbMediaBreakpointsService, NbMenuItem, NbSidebarService, NbThemeService } from '@nebular/theme';
+import { Subscription, map } from 'rxjs';
 import { GeneralService } from 'src/app/providers';
 
 @Component({
@@ -11,6 +12,7 @@ import { GeneralService } from 'src/app/providers';
 })
 export class ScaffoldComponent implements OnInit {
   loading: boolean = false;
+  isLessThanXl = false;
   MENU_ITEMS: NbMenuItem[] = [
     {
       title: "Administrar",
@@ -65,8 +67,16 @@ export class ScaffoldComponent implements OnInit {
       ],
     },
   ];
-  constructor(private service: GeneralService, private router: Router) { }
+  constructor(private service: GeneralService, private router: Router, private _nbSidebarService: NbSidebarService, private _breakpointService: NbMediaBreakpointsService,
+    private _nbThemeService: NbThemeService) { }
 
+  onLessThanXl(): Subscription {
+    const {xl} = this._breakpointService.getBreakpointsMap();
+    return this._nbThemeService.onMediaQueryChange().pipe(
+      map(([, currentBreakpoint]) => currentBreakpoint.width < xl))
+      .subscribe((isLessThanXl: boolean) => this.isLessThanXl = isLessThanXl);
+  }
+  
   ngOnInit(): void {
   }
   logout() {
@@ -81,5 +91,10 @@ export class ScaffoldComponent implements OnInit {
     //     }, 100);
     //   }
     // }, () => this.loading = false, () => this.loading = false);
+  }
+  toggle(): boolean {
+    this._nbSidebarService.toggle(true, 'core-sidebar');
+    this.isLessThanXl = !this.isLessThanXl;
+    return false;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeneralService } from 'src/app/providers';
 import { END_POINTS } from 'src/app/providers/utils';
@@ -8,7 +8,7 @@ import { END_POINTS } from 'src/app/providers/utils';
   templateUrl: './v-groups.component.html',
   styleUrls: ['./v-groups.component.scss']
 })
-export class VGroupsComponent implements OnInit {
+export class VGroupsComponent implements OnInit, OnChanges {
   // dataFut:any = [];
   // dataBasq:any = [];
   // dataVoley:any = [];
@@ -20,6 +20,14 @@ export class VGroupsComponent implements OnInit {
   categorias:any = [];
   data:any = [];
   constructor(private service: GeneralService, private fb: FormBuilder) {}
+
+  ngOnChanges():void {
+    if (this.idPeriodo) {
+      setTimeout(() => {
+        this.listGroups();
+      }, 100);
+    }
+  }
   ngOnInit() {
     // this.listDataFutbol();
     // this.listDataBasquet();

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GeneralService } from 'src/app/providers';
 import { END_POINTS } from 'src/app/providers/utils';
@@ -8,7 +8,7 @@ import { END_POINTS } from 'src/app/providers/utils';
   templateUrl: './v-table-position.component.html',
   styleUrls: ['./v-table-position.component.scss']
 })
-export class VTablePositionComponent implements OnInit {
+export class VTablePositionComponent implements OnInit, OnChanges {
   dataFut:any = [];
   dataBasq:any = [];
   dataVoley:any = [];
@@ -22,6 +22,14 @@ export class VTablePositionComponent implements OnInit {
   data:any = [];
 
   constructor(private service: GeneralService, private fb: FormBuilder) {}
+
+  ngOnChanges():void {
+    if (this.idPeriodo) {
+      setTimeout(() => {
+        this.listTablePosition();
+      }, 100);
+    }
+  }
 
   ngOnInit() {
     // this.listDataFutbol();

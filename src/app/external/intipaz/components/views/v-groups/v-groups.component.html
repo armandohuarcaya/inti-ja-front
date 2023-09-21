@@ -1,6 +1,6 @@
 <div [nbSpinner]="loading">
     <nb-tabset fullWidth (changeTab)="tabDiciplina($event)">
-        <nb-tab *ngFor="let items of diciplinas; let ii = index" [tabTitle]="items.nombre" [active]="ii === 0" [tabId]="items.id_diciplina" style="padding-left: 0px; padding-right: 0px;">
+        <nb-tab *ngFor="let items of diciplinas; let ii = index" [tabTitle]="items.nombre" [active]="ii === 0" [tabId]="items.id_diciplina">
             <div class="table-responsive text-center">
                 <nb-button-group size="small" shape="round" ghost status="warning">
                     <button nbButtonToggle [pressed]="formHeaders.value.id_categoria === ''" (click)="selectCategory('')"><nb-icon icon="grid-outline" status="success"></nb-icon>&nbsp; TODOS</button>
