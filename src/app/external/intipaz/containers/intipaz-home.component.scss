@@ -37,3 +37,23 @@
     bottom: 0;
     z-index: 1; /* Asegura que el header esté sobre el contenido */
   }
+
+  
+/* Estilo para el botón flotante */
+.boton-flotante {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+  right: 20px; /* Ajusta la distancia desde la parte derecha */
+  // background-color: #007bff; /* Color de fondo del botón */
+  // color: #fff; /* Color del texto del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quita el subrayado de enlace */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+  z-index: 999; /* Asegura que el botón esté por encima del contenido */
+}
+
+/* Cambiar el estilo al pasar el mouse sobre el botón (opcional) */
+.boton-flotante:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}

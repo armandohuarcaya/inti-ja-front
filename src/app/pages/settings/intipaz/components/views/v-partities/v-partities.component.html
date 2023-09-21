@@ -3,17 +3,9 @@
         <div class="row">
             <div class="col-md-3">
                 <label class="label">Periodo</label><br>
-                <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo">
+                <nb-select fullWidth size="small" formControlName="id_periodo" placeholder="Selecciona periodo" (selectedChange)="selectPeriodo()">
                     <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
                         {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
-                    </nb-option>
-                </nb-select>
-            </div>
-            <div class="col-md-3">
-                <label class="label">Diciplina</label><br>
-                <nb-select fullWidth size="small" formControlName="id_diciplina" placeholder="Selecciona diciplina">
-                    <nb-option *ngFor="let item of diciplinas" [value]="item.id_diciplina">
-                        {{item.nombre}}
                     </nb-option>
                 </nb-select>
             </div>
@@ -21,6 +13,14 @@
                 <label class="label">Fase</label><br>
                 <nb-select fullWidth size="small" formControlName="id_fase" placeholder="Selecciona fase">
                     <nb-option *ngFor="let item of fases" [value]="item.id_fase">
+                        {{item.nombre}}
+                    </nb-option>
+                </nb-select>
+            </div>
+            <div class="col-md-3">
+                <label class="label">Diciplina</label><br>
+                <nb-select fullWidth size="small" formControlName="id_diciplina" placeholder="Selecciona diciplina">
+                    <nb-option *ngFor="let item of diciplinas" [value]="item.id_diciplina">
                         {{item.nombre}}
                     </nb-option>
                 </nb-select>

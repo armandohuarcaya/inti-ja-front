@@ -1,11 +1,14 @@
 <nb-layout>
     <nb-layout-header  class="header-actions" fixed>
         <nb-actions>
-            <!-- <nb-action icon="menu-2-outline" (click)="toggle()"></nb-action> -->
-            <nb-action class="text-center">
+            <nb-action class="text-center" *ngIf="!isLessThanXl">
                 <img src="https://uvoc.com.ve/wp-content/uploads/Isolated_Warm_Back-Trans.png?thumbnail=original&1506357338" alt="" height="60px">
-                <span style="color: white;">&nbsp;&nbsp; IASD El Inti - JA</span> 
-              <!-- <img *ngIf="!hidden" src="assets/logo-lamb-learning-blanco.svg" alt="Lamb" class="logo"/> -->
+                <span style="color: white;">&nbsp;&nbsp; IASD El Inti - JA</span>
+            </nb-action>
+            <nb-action>
+                <button nbButton ghost (click)="toggle()">
+                    <nb-icon status="warning" [icon]="isLessThanXl ? 'menu': 'menu-2-outline'"></nb-icon>
+                  </button>
             </nb-action>
           </nb-actions>
           <nb-actions>
@@ -13,18 +16,8 @@
                 <button nbButton size="small" (click)="logout()" [nbSpinner]="loading" ghost>Salir</button>
             </nb-action>
     </nb-actions>
-    
-    
-        <!-- <div class="d-flex align-items-center justify-content-between">
-            <label routerLink="/login">Company Name</label>
-            <label for="">ssss</label>
-        </div> -->
-        
     </nb-layout-header>
-    <nb-sidebar responsive tag="core-sidebar" style="background: red">
-        <!-- <nb-sidebar-header class="bakground text-center">
-            <strong>PROGRAMER</strong>
-        </nb-sidebar-header> -->
+    <nb-sidebar responsive tag="core-sidebar">
         <nb-menu [items]="MENU_ITEMS" tag="core-menu"></nb-menu>
         <nb-sidebar-footer>
             <strong style="font-size: 8px;">Create by Cristian Huarcaya 2023</strong>
@@ -33,7 +26,4 @@
     <nb-layout-column class="found" [nbSpinner]="loading" nbSpinnerSize="tiny" nbSpinnerStatus="primary">
         <router-outlet></router-outlet>
     </nb-layout-column>
-    <!-- <nb-layout-footer>
-        Create by Cristian Huarcaya
-    </nb-layout-footer> -->
 </nb-layout>
