@@ -59,7 +59,7 @@
                     <form [formGroup]="formHeaders">
                         <div>
                             <label class="label">Periodo</label><br>
-                            <nb-select size="small" fullWidth placeholder="periodo" status="success" formControlName="id_periodo">
+                            <nb-select size="small" fullWidth placeholder="periodo" status="success" formControlName="id_periodo" (selectedChange)="selectPeriodo()">
                                 <nb-option value=""></nb-option>
                                 <nb-option *ngFor="let item of periodos" [value]="item.id_periodo">
                                     {{item.nombre}} - {{item.id_anho}} del {{item.fecha_inicio | date: 'dd/MM/yyyy'}} al {{item.fecha_fin | date: 'dd/MM/yyyy'}}
