@@ -41,11 +41,12 @@
 // PAra el diseño de la tabla
 ::ng-deep .table>:not(caption)>*>* {     //quitar borde de la tabla cuando es 0
     border-bottom-width: 0px !important;
+    // background-color: 1px solid var(--text-hint-color) !important;
 }
 
 ::ng-deep table.table {     // color de tabla segun el tema
     font-family: var(--font-family-primary) !important;
-    color: var(--text-basic-color) !important;
+    color: var(--color-primary-600) !important;
 
 }
 

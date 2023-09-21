@@ -20,7 +20,8 @@
                         </nb-button-group>
                     </div>
             </nb-card-header>
-            <nb-card-body [class]="['equipos', 'organigrama'].includes(views) ? 'cuerpo' : ''">
+            <!-- [class]="['equipos', 'organigrama'].includes(views) ? 'cuerpo' : ''" -->
+            <nb-card-body class="cuerpo">
                 <span [ngSwitch]="views">
                     <span *ngSwitchCase="'equipos'">
                         <app-v-equipment *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-equipment>

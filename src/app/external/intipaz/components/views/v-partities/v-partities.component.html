@@ -22,11 +22,20 @@
                             </nb-card-header>
                             <nb-card-body>
                                 <div class="table-responsive">
+                                    <!-- <nb-list>
+                                        <nb-list-item *ngFor="let det of item?.details; let ik = index" style="font-size: 18px !important; font-weight: bold;" class="d-flex align-items-center justify-content-between">
+                                            <span>
+                                                <img [src]="det.logo" alt="" height="40">&nbsp;{{det.equipo}}
+                                            </span>
+                                            <span>
+                                                {{det.puntos}}
+                                            </span>
+                                        </nb-list-item>
+                                      </nb-list> -->
                                     <table class="table table-sm">
                                         
                                         <tbody>
                                             <tr *ngFor="let det of item?.details; let ik = index" style="font-size: 18px !important; font-weight: bold;">
-                                                <!-- <td>{{ik+1}}</td> -->
                                                 <td style="width: 1px;"><img [src]="det.logo" alt="" height="40"></td>
                                                 <td>{{det.equipo}}</td>
                                                 <td style="width: 80px;" class="text-center">{{det.puntos}}</td>
