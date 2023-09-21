@@ -1,3 +1,10 @@
 img {
     border-radius: 10rem;;
 }
+::ng-deep nb-tabset .tab.active .tab-link::before {
+    background: var(--color-warning-500) !important;
+    height: 12px !important;
+}
+::ng-deep nb-tabset .tab.active .tab-link {
+    color: var(--color-warning-500) !important;
+}
