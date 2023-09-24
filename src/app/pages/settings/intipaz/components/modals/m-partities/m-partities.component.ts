@@ -82,7 +82,10 @@ export class MPartitiesComponent implements OnInit {
   }
   getFases() {
     const serviceName = END_POINTS.el_inti.filterComun + '/fases';
-    this.service.nameAll$(serviceName).subscribe((res:any) => {
+    const params = {
+      id_periodo: 1,
+    };
+    this.service.nameParams$(serviceName, params).subscribe((res:any) => {
       this.fases = res.data || [];
       if (this.fases.length>0) {
         this.formHeaders.controls['id_fase'].setValue(this.fases[0].id_fase);
