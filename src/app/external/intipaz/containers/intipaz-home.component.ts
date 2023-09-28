@@ -16,6 +16,7 @@ export class IntipazHomeComponent implements OnInit {
   periodos:any = [];
   fases:any = [];
   formHeaders:any = FormGroup;
+  refresh: number = 0;
   constructor(private router: Router, private service: GeneralService, private nbDialogService: NbDialogService, private fb: FormBuilder) {}
   ngOnInit() {
     this.formFields();
@@ -67,5 +68,8 @@ export class IntipazHomeComponent implements OnInit {
   }
   open(dialog: TemplateRef<any>) {
     this.nbDialogService.open(dialog, { context: 'this is some additional data passed to dialog' });
+  }
+  refreshes() {
+    this.refresh = this.refresh + 1;
   }
 }

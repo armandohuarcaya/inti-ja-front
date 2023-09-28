@@ -16,15 +16,14 @@ export class VTablePositionComponent implements OnInit, OnChanges {
   formHeaders:any = FormGroup;
   loading:boolean = false;
   @Input() idPeriodo:any;
-  idFase:number = 1;
   diciplinas:any = [];
   categorias:any = [];
   data:any = [];
-
+  @Input() refresh:number = 0;
   constructor(private service: GeneralService, private fb: FormBuilder) {}
 
   ngOnChanges():void {
-    if (this.idPeriodo) {
+    if (this.idPeriodo || this.refresh) {
       setTimeout(() => {
         this.listTablePosition();
       }, 100);
@@ -44,7 +43,6 @@ export class VTablePositionComponent implements OnInit, OnChanges {
       id_periodo: [this.idPeriodo || '', [Validators.required]],
       id_diciplina: ['', [Validators.required]],
       id_categoria: [''],
-      id_fase: [this.idFase || ''],
     };
     this.formHeaders = this.fb.group(controls);
   }
@@ -78,7 +76,7 @@ export class VTablePositionComponent implements OnInit, OnChanges {
   listTablePosition() {
     const serviceName = END_POINTS.el_inti.settings.intipaz + '/table-position';
     const params = {
-      id_periodo: this.formHeaders.value.id_periodo,
+      id_periodo: this.idPeriodo,
       id_diciplina: this.formHeaders.value.id_diciplina,
       id_categoria: this.formHeaders.value.id_categoria,
     };

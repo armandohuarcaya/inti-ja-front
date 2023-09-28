@@ -19,10 +19,11 @@ export class VGroupsComponent implements OnInit, OnChanges {
   diciplinas:any = [];
   categorias:any = [];
   data:any = [];
+  @Input() refresh:number = 0;
   constructor(private service: GeneralService, private fb: FormBuilder) {}
 
   ngOnChanges():void {
-    if (this.idPeriodo) {
+    if (this.idPeriodo || this.refresh) {
       setTimeout(() => {
         this.listGroups();
       }, 100);
@@ -74,7 +75,7 @@ export class VGroupsComponent implements OnInit, OnChanges {
   listGroups() {
     const serviceName = END_POINTS.el_inti.settings.intipaz + '/group-equipe';
     const params = {
-      id_periodo: this.formHeaders.value.id_periodo,
+      id_periodo: this.idPeriodo,
       id_diciplina: this.formHeaders.value.id_diciplina,
       id_categoria: this.formHeaders.value.id_categoria,
     };

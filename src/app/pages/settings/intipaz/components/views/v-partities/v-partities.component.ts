@@ -168,6 +168,7 @@ export class VPartitiesComponent implements OnInit {
     const serviceName = END_POINTS.el_inti.settings.intipaz + '/finish-partities';
     const params = {
       finalizado: 'F',
+      id_fase: this.formHeaders.value.id_fase
     };
     this.nbDialogService.open(DialogConfimComponent, {
       dialogClass: 'dialog-limited-height',

@@ -87,6 +87,9 @@ export class SignInComponent implements OnInit, OnDestroy {
     //   }
     // }, () => this.loading = false, () => this.loading = false);
   }
+  init() {
+    this.router.navigate(['/intipaz']);
+  }
   typesChange() {
     this.changeValues.emit('REGISTER');
   }
