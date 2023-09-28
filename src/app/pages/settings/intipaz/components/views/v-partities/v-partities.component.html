@@ -56,7 +56,7 @@
                     <nb-badge [text]="item.finalizado === 'N' ? 'Pendiente' : item.finalizado === 'J' ? 'JUGANDO ....' : 'Finalizado'" 
                         [status]="item.finalizado === 'N' ? 'danger' : item.finalizado === 'J' ? 'warning' : 'success'" position="top right">
                     </nb-badge>
-                   {{item.orden}}). {{item.grupo}} - {{item.categoria}}
+                   {{item.orden}}). {{item.grupo || item.fase}} - {{item.categoria}}
                 </nb-card-header>
                 <nb-card-body>
                     <div class="table-responsive">
