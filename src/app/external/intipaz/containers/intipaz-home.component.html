@@ -24,16 +24,33 @@
             <nb-card-body class="cuerpo">
                 <span [ngSwitch]="views">
                     <span *ngSwitchCase="'equipos'">
-                        <app-v-equipment *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-equipment>
+                        <app-v-equipment 
+                        *ngIf="formHeaders.value.id_periodo"
+                        [idPeriodo]="formHeaders.value.id_periodo"
+                        [refresh]="refresh">
+                        </app-v-equipment>
                     </span>
                     <span *ngSwitchCase="'grupos'">
-                        <app-v-groups *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-groups>
+                        <app-v-groups 
+                        *ngIf="formHeaders.value.id_periodo"
+                        [idPeriodo]="formHeaders.value.id_periodo"
+                        [refresh]="refresh">
+                        </app-v-groups>
                     </span>
                     <span *ngSwitchCase="'partidos'">
-                        <app-v-partities *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo" [idFase]="formHeaders.value.id_fase"></app-v-partities>
+                        <app-v-partities 
+                        *ngIf="formHeaders.value.id_periodo"
+                        [idPeriodo]="formHeaders.value.id_periodo"
+                        [idFase]="formHeaders.value.id_fase"
+                        [refresh]="refresh">
+                        </app-v-partities>
                     </span>
                     <span *ngSwitchCase="'tabla-posicion'">
-                        <app-v-table-position *ngIf="formHeaders.value.id_periodo" [idPeriodo]="formHeaders.value.id_periodo"></app-v-table-position>
+                        <app-v-table-position 
+                        *ngIf="formHeaders.value.id_periodo"
+                        [idPeriodo]="formHeaders.value.id_periodo"
+                        [refresh]="refresh">
+                        </app-v-table-position>
                     </span>
                     <span *ngSwitchCase="'organigrama'" class="text-center">
                         <app-v-organigrama></app-v-organigrama>
@@ -49,7 +66,7 @@
         </nb-card>
 
         <!-- PARA PERIRO Y FASES -->
-
+        <button nbButton shape="round" size="small" status="warning" class="boton-flotante-dos" (click)="refreshes()"><nb-icon icon="refresh-outline"></nb-icon></button>
         <button nbButton shape="round" size="small" status="success" class="boton-flotante" (click)="open(dialog)"><nb-icon icon="funnel-outline"></nb-icon></button>
         <ng-template #dialog let-data let-ref="dialogRef">
             <nb-card status="primary">
