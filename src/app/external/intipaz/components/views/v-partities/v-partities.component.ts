@@ -20,11 +20,11 @@ export class VPartitiesComponent implements OnInit, OnChanges {
   diciplinas:any = [];
   categorias:any = [];
   data:any = [];
-
+  @Input() refresh:number = 0;
   constructor(private service: GeneralService, private fb: FormBuilder) {}
 
   ngOnChanges():void {
-    if (this.idPeriodo || this.idFase) {
+    if (this.idPeriodo || this.idFase || this.refresh) {
       setTimeout(() => {
         this.listPartities();
       }, 100);
@@ -78,10 +78,10 @@ export class VPartitiesComponent implements OnInit, OnChanges {
   listPartities() {
     const serviceName = END_POINTS.el_inti.settings.intipaz + '/partities';
     const params = {
-      id_periodo: this.formHeaders.value.id_periodo,
+      id_periodo: this.idPeriodo,
       id_diciplina: this.formHeaders.value.id_diciplina,
       id_categoria: this.formHeaders.value.id_categoria,
-      id_fase: this.formHeaders.value.id_fase,
+      id_fase: this.idFase,
     };
     if (params.id_periodo && params.id_diciplina && params.id_fase) {
       this.loading = true;

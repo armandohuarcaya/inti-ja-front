@@ -16,9 +16,10 @@ export class VEquipmentComponent implements OnInit, OnChanges {
   data:any = [];
   loading:boolean = false;
   @Input() idPeriodo:any;
+  @Input() refresh:number = 0;
   constructor(private consume: DataJsonService, private nbDialogService: NbDialogService, private service: GeneralService, private fb: FormBuilder) {}
   ngOnChanges():void {
-    if (this.idPeriodo) {
+    if (this.idPeriodo || this.refresh) {
       setTimeout(() => {
         this.listEquipos();
       }, 100);
@@ -36,7 +37,7 @@ export class VEquipmentComponent implements OnInit, OnChanges {
   listEquipos() {
     const serviceName = END_POINTS.el_inti.settings.intipaz + '/equipements';
     const params = {
-      id_periodo: this.formHeaders.value.id_periodo,
+      id_periodo: this.idPeriodo,
     };
     if (params.id_periodo) {
       this.loading = true;
