@@ -86,7 +86,7 @@ export class VTablePositionComponent implements OnInit, OnChanges {
         this.data = res.data || [];
         if (this.data.length>0) {
           this.data.map((res:any) => {
-            res.data.sort((a:any, b:any) => (Number(b.puntos) - Number(a.puntos)) || (Number(a.partido_jugado) - Number(b.partido_jugado)) || (Number(b.diferencia_goles) - Number(a.diferencia_goles)));
+            res.data.sort((a:any, b:any) => (Number(b.puntos) - Number(a.puntos)) || (Number(b.partido_jugado) - Number(a.partido_jugado)) || (Number(b.diferencia_goles) - Number(a.diferencia_goles)));
           });
         }
       }, () => this.loading = false, () => this.loading = false);
