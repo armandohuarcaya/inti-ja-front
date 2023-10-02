@@ -62,7 +62,12 @@ export class IntipazHomeComponent implements OnInit {
     this.service.nameParams$(serviceName, params).subscribe((res:any) => {
       this.fases = res.data || [];
       if (this.fases.length>0) {
-        this.formHeaders.controls['id_fase'].setValue(this.fases[0].id_fase);
+        const fil = this.fases.find((a:any) => a.activo === 'S');
+        if (fil) {
+           this.formHeaders.controls['id_fase'].setValue(fil.id_fase);
+        } else {
+          this.formHeaders.controls['id_fase'].setValue(this.fases[0].id_fase);
+        }
       }
     });
   }
